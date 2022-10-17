@@ -44,7 +44,7 @@ public class MessageBean implements Serializable {
                 if (timeNow>=0 && timeNow<=12){
                     return "Bom Dia";
                 }else{
-                    if (timeNow>=13 && timeNow<=18){
+                    if (timeNow>=13 && timeNow<18){
                         return "Boa Tarde";
                     }else{
                         return "Boa Noite";
@@ -55,7 +55,7 @@ public class MessageBean implements Serializable {
                 if (timeNow>=0 && timeNow<=12){
                     return "Good Morning";
                 }else{
-                    if (timeNow>=13 && timeNow<=18){
+                    if (timeNow>=13 && timeNow<18){
                         return "Good Afternoon";
                     }else{
                         return "Good Evening";
@@ -65,7 +65,7 @@ public class MessageBean implements Serializable {
                 if (timeNow>=0 && timeNow<=12){
                     return "Guten Morgen";
                 }else{
-                    if (timeNow>=13 && timeNow<=18){
+                    if (timeNow>=13 && timeNow<18){
                         return "Guten Nachmittag";
                     }else{
                         return "Guten Abend";
@@ -75,7 +75,7 @@ public class MessageBean implements Serializable {
                  if (timeNow>=0 && timeNow<=12){
                     return "Bonjour";
                 }else{
-                    if (timeNow>=13 && timeNow<=18){
+                    if (timeNow>=13 && timeNow<18){
                         return "Bon après-midi";
                     }else{
                         return "Bonsoir";
