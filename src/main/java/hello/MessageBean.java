@@ -45,7 +45,7 @@ public class MessageBean implements Serializable {
                     return "Bom Dia";
                 }else{
                     if (timeNow>=13 && timeNow<=18){
-                        return "Boa Tarde" + timeNow;
+                        return "Boa Tarde";
                     }else{
                         return "Boa Noite";
                     }
