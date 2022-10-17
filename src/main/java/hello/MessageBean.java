@@ -9,7 +9,7 @@ package hello;
 
 import java.beans.*;
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  *
@@ -35,7 +35,7 @@ public class MessageBean implements Serializable {
     public String getMsg() {
         switch (this.lang){
             case "pt":
-                return "Alôu" + LocalDate.now();
+                return "Alô" + LocalTime.now();
             case "en":
                 return "Hello";
             case "de":
