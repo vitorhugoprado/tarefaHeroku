@@ -37,7 +37,7 @@ public class MessageBean implements Serializable {
     }
     public String getMsg() {
         LocalTime time = LocalTime.now();
-        int timeNow = 22;
+        int timeNow = (time.getHour() - 3);
         // diminui a hora por 1 por motivos de fuso horário
         switch (this.lang){
             case "pt":
