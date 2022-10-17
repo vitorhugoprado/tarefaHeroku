@@ -7,9 +7,11 @@ package hello;
  */
 
 
-import java.beans.*;
+
 import java.io.Serializable;
-import java.time.LocalTime;
+import java.time.*;
+
+
 
 /**
  *
@@ -21,6 +23,7 @@ public class MessageBean implements Serializable {
     private String lang;
     private String msg;
     private String msg2;
+    
         
     public MessageBean() {
     }
@@ -33,15 +36,51 @@ public class MessageBean implements Serializable {
         lang = value;
     }
     public String getMsg() {
+        LocalTime time = LocalTime.now();
+        int timeNow = 22;
+        // diminui a hora por 1 por motivos de fuso horário
         switch (this.lang){
             case "pt":
-                return "Alô" + LocalTime.now();
+                if (timeNow>=0 && timeNow<=12){
+                    return "Bom Dia";
+                }else{
+                    if (timeNow>=13 && timeNow<=18){
+                        return "Boa Tarde" + timeNow;
+                    }else{
+                        return "Boa Noite";
+                    }
+                }
+                            
             case "en":
-                return "Hello";
+                if (timeNow>=0 && timeNow<=12){
+                    return "Good Morning";
+                }else{
+                    if (timeNow>=13 && timeNow<=18){
+                        return "Good Afternoon";
+                    }else{
+                        return "Good Evening";
+                    }
+                }
             case "de":
-                return "Hallo";
+                if (timeNow>=0 && timeNow<=12){
+                    return "Guten Morgen";
+                }else{
+                    if (timeNow>=13 && timeNow<=18){
+                        return "Guten Nachmittag";
+                    }else{
+                        return "Guten Abend";
+                    }
+                }
             case "fr":
-                return "Bonjour";
+                 if (timeNow>=0 && timeNow<=12){
+                    return "Bonjour";
+                }else{
+                    if (timeNow>=13 && timeNow<=18){
+                        return "Bon après-midi";
+                    }else{
+                        return "Bonsoir";
+                    }
+                }
         }
         return "";
     }
